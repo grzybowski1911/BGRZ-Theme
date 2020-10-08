@@ -12,12 +12,16 @@
             loop: false,
             showCursor: false,
           });
+
     // home page sticky 
+    if($("#sticker")) {
     var stickyBottomOffset = $('#page-wrapper').height();
 	    $("#sticker").sticky({
-            topSpacing:0, 
-            bottomSpacing: stickyBottomOffset + $('.front-page-banner').height() 
+            topSpacing:80, 
+            bottomSpacing: stickyBottomOffset + 460,
+            center: true  
         });
+    }
     // navigation functionality
         var nav = $('.navbar');
         var navIcon = $('.nav-icon');

@@ -19,7 +19,7 @@ $banner_content = get_field('banner_content');
             video not supported by this browser
         </video>
     </div>
-        <div class="banner-copy sticker" data-animation="">
+        <div class="banner-copy" id="sticker" data-animation="">
         <svg class="front-page-svg-logo" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.75 91.66">
           <defs>
             <style>
