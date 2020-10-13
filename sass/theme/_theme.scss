@@ -47,6 +47,8 @@ $nav-color-active: rgba(42,88,94, .9);
     stroke-dasharray: 582;
     animation: draw-logo 2s;
     animation-fill-mode: forwards;
+    -moz-animation-animation: draw-logo 4s;
+    -moz-animation-animation-fill-mode: forwards;
 }
 
 .letters {
@@ -63,6 +65,15 @@ $nav-color-active: rgba(42,88,94, .9);
 @keyframes draw-logo {
     from {
         stroke-dashoffset: -582;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-moz-keyframes draw-logo {
+    from {
+        stroke-dashoffset: 582;
     }
     to {
         stroke-dashoffset: 0;
