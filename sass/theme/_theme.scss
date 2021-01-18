@@ -44,7 +44,7 @@ $nav-color-active: rgba(42,88,94, .9);
 
 .cls-1 {
     stroke-dashoffset: -582;
-    stroke-dasharray: 582;
+    stroke-dasharray: 582 582;
     animation: draw-logo 2s;
     animation-fill-mode: forwards;
     -moz-animation-animation: draw-logo 4s;
@@ -338,6 +338,7 @@ a {
 .half-banner {
     height: 50vh;
     @include banner-class;
+    flex-direction: column;
     @include respond(phone) {
         height: 75vh;
         background-attachment: unset;
@@ -345,6 +346,16 @@ a {
     img {
         position: absolute;
         bottom: 5px;
+    }
+}
+
+.portfolio_searchForm {
+    .input {
+        background: black; 
+        font-family: $heading;
+        color: white;
+        border: none;
+        padding: 5px 10px;
     }
 }
 
@@ -370,7 +381,7 @@ a {
     opacity: .15;
     overflow: hidden;
     @include respond(phone) {
-        display: none;
+        //display: none;
     }
    &:content {
        height: 100%;

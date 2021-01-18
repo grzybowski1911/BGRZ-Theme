@@ -1,6 +1,7 @@
 <?php 
 	$insta = get_option('insta_link');
 	$twitter = get_option('twitter_link');
+	$github = get_option('github_link');
 	$fb = get_option('fb_link');
 	$linked = get_option('linkedin_link');
 	$footer_content = get_option('footer_content');
@@ -19,6 +20,9 @@
 			<?php } ?>
 			<?php if ($insta) {?>
 				<a href="<?php echo esc_url($insta); ?>"><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></a>
+			<?php } ?>
+			<?php if ($github) {?>
+				<a href="<?php echo esc_url($github); ?>"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a>
 			<?php } ?>
 			<?php if ($twitter) { ?>
 				<a href="<?php echo esc_url($twitter); ?>"><i class="fa fa-3x fa-twitter-square" aria-hidden="true"></i></a>

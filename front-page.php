@@ -143,6 +143,12 @@ $banner_content = get_field('banner_content');
 				);
                 ?>
                 <?php $x = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <?php 
+                    $id = get_the_ID();
+                    $img = get_field('recent_projects_slider_image', $id);
+                    $img_url = $img['url'];
+                    $img_title = $img['title'];
+                ?>
                 <?php if ($x == 0) { ?>
 					<div class="carousel-item active">
 				<?php } else { ?>
@@ -150,7 +156,7 @@ $banner_content = get_field('banner_content');
                 <?php } ?>
                 <div class="carousel-content">
                     <div class="carousel-left" data-animation="animated fadeInLeft">
-                        <?php the_post_thumbnail('medium'); ?>
+                        <img src="<?php echo $img_url; ?>" alt="<?php echo $img_title; ?>">
                     </div>
                     <div class="carousel-right" data-animation="animated fadeInRight">
                         <h4><?php the_title(); ?></h4>
